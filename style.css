@@ -1,0 +1,417 @@
+@font-face{
+    font-family:Bebas;
+    src: url(fonts/Bebas-Regular.ttf);
+}
+
+
+@font-face{
+    font-family: Balham;
+    src: url(fonts/Balham.otf);
+}
+
+@font-face{
+    font-family: Offering;
+    src: url(fonts/Offerings-Regular.otf)
+}
+
+body{
+    background: #191a1a;
+    color: #fff;
+    
+}
+
+.relative{
+    position: relative;
+}
+
+.full-height{
+    height: 100vh;
+}
+
+.full-width{
+    width: 100vw;
+}
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+  }
+  
+
+  .progress-bar {
+    height: 8px;
+    background: #fff;
+    width: 0%;
+  }
+
+
+ 
+
+/* Scroll Down Bar */
+
+.scroll-container{
+ position: absolute;
+ left: 50%;
+ bottom: 10%;
+ height: 200px;     
+ width: 100px;
+}
+
+
+.scroll-down{
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 200px;
+    background: transparent;
+}
+
+.scroll-down:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, #fff, transparent);
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    50%
+    {
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+    51%
+    {
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }
+    100%
+    {
+        transform-origin: bottom;
+        transform: scaleY(0);
+    }
+}
+
+
+.scroll-container p{
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 100px;
+    left: -50%;
+    top: 70%;
+}
+
+/*  */
+
+
+/* Page Anchor Links */
+.page-links{
+    transform: rotate(-90deg);
+    position: fixed;
+    top: 20%;
+    left: -1%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.page-links li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.page-links span{
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.page-links span:before, .page-links span:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #000;
+  }
+  
+  .page-links span:before {
+    left: -2.5px;
+  }
+  .page-links span:after {
+    right: 2.5px;
+    background: #000;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  .page-links span:hover:before {
+    background: #000;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  .page-links span:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
+  /*  */
+
+  /* Copyright */
+  .copyright{
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      width: 250px;
+      text-align: center;
+      margin-left: -125px;
+      font-family: Bebas;
+  }
+  /*  */
+
+
+
+/* Main Title */
+
+.welcome-screen{
+    font-family: Bebas;
+}  
+  
+
+.full-height{
+    display:flex;
+    height: 100vh;
+}
+
+.main-title{
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+.main-title h1{
+    font-size: 10em;
+    border: 10px solid white;
+    padding: 0px 15px;
+
+}
+
+.main-title h2{
+    font-size: 5em;
+    color: white;
+    -webkit-text-fill-color: transparent; 
+     -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}  
+
+@media screen and (max-width: 600px) {
+    .main-title h1{
+        font-size: 5em;
+        border: none;
+    }
+
+    .main-title h2{
+        font-size: 3em;
+        color: white;
+        -webkit-text-fill-color: transparent; 
+         -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+    }
+}
+
+  
+/*  */
+
+
+.skill-experience{
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    font-family: Balham;
+}
+
+.skill-experience h2{
+    margin-bottom: 20px;
+}
+
+
+/* Work Section */
+.left-border{
+    border-left: 5px solid #fff;
+    margin-bottom: 10em;
+}
+
+@media(max-width:658px){
+    .left-border{
+        border-left: none;
+        margin-bottom: 5em;
+    }
+}
+
+.work li{
+    list-style: none;
+}
+
+.work a{
+    color:white;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+/* Skills Section */
+
+.right-border{
+    border-right: 5px solid #fff;
+    margin-bottom: 10em;
+}
+
+.skills li{
+    list-style: none;
+}
+
+
+/* About Me */
+
+.social-links li{
+    display: inline-block;
+}
+
+.item-a{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.item-b{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.item-c{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.item-c img{
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.item-d{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.item-e{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    place-self: center stretch;
+    font-size: 20rem;
+    border: 4px solid white;
+}
+
+.item-f{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.item-f img{
+    object-fit: cover;
+    width:100%;
+}
+
+.item-g{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+.about-me{
+    height:100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 575px 874px 1fr;
+    grid-template-rows:210px 369px 1fr;
+    
+}
+
+
+/*  */
+
+
+/* Contact */
+
+.contact-me{
+    font-family:Offering;
+}
+
+.contact-title{
+    margin: auto;
+}
+
+.conntact-title h1{
+    font-size: 10em;
+    border: 10px solid white;
+    padding: 0px 15px;
+
+}
+
+.contact-title h2{
+    font-size: 5em;
+    color: white;
+    -webkit-text-fill-color: transparent; 
+     -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}  
+
+
+.contact-title a{
+    color: white;
+    font-size: 5em;
+}
+/*  */
