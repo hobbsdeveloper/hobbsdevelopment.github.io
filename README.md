@@ -1,3 +1,2 @@
-# hobbsdevelopment.github.io
-# hobbsdevelopment.github.io
-# hobbsdevelopment.github.io
+# hobbsdevelopment portfolio
+Nothing much more than that really
